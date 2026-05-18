@@ -29,3 +29,22 @@ const throwError = (msg: string) => {
 
 	// return "Error will never reach past that point so it will never return anything"
 };
+
+const todaysWeather = {
+	date: new Date(),
+	weather: "sunny",
+};
+
+// Destructuring
+const logWeather = ({ date, weather }: { date: Date; weather: string }): void => {
+	console.log(date);
+	console.log(weather);
+};
+
+//ES2015
+// const logWeather = ({ date, weather }) => {
+// 	console.log(date);
+// 	console.log(weather);
+// };
+
+logWeather(todaysWeather);
