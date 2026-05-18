@@ -50,3 +50,15 @@ for (let i = 0; i < words.length; i++) {
 		console.log(foundWord);
 	}
 }
+
+// 3) When we want a variable to have a type that can't be inferred
+let numbers = [-10, -1, 12];
+let numbersAboveZero: number | boolean = false;
+
+for (let i = 0; i < numbers.length; i++) {
+	if (numbers[i] > 0) {
+		numbersAboveZero = numbers[i];
+	} else {
+		numbersAboveZero = false;
+	}
+}
