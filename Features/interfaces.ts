@@ -1,29 +1,29 @@
 interface Reportable {
-	// name: string;
-	// date: Date;
-	// broken: boolean;
-	printSummary(): string;
+	summary(): string;
 }
 
 const oldCivic = {
 	name: "civic",
 	date: new Date(),
 	broken: false,
-	printSummary(): string {
+	summary(): string {
 		return `Name ${this.name} with date of ${this.date}`;
 	},
 };
 
-// First example of interface
-const printVehicle = (item: Reportable) => {
-	// if (!vehicle.broken) {
-	// 	console.log(
-	// 		`Model is ${vehicle.name[0].toUpperCase() + vehicle.name.slice(1)} with date of ${vehicle.date}`,
-	// 	);
-	// }
-
-	// Using summary
-	console.log(item.printSummary());
+const drink = {
+	color: "red",
+	carbonated: true,
+	sugarContent: 40,
+	summary(): string {
+		return `My drink has ${this.sugarContent} grams of sugar`;
+	},
 };
 
-printVehicle(oldCivic);
+// First example of interface
+const printSummary = (item: Reportable): void => {
+	console.log(item.summary());
+};
+
+printSummary(oldCivic);
+printSummary(drink);
