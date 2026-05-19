@@ -1,0 +1,9 @@
+{
+	"devDependencies": {
+		"@faker-js/faker": "^10.4.0",
+		"buffer": "^6.0.3"
+	},
+	"type": "module",
+	"name": "maps",
+	"version": ""
+}
