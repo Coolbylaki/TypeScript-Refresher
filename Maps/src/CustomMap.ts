@@ -1,9 +1,10 @@
 // Instructions to every class how they can be argument to addMarker
-interface Mappable {
+export interface Mappable {
 	location: {
 		lat: number;
 		lng: number;
 	};
+	color: string;
 	markerContent(): string;
 }
 
