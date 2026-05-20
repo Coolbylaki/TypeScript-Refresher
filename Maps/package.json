@@ -5,5 +5,8 @@
 	},
 	"type": "module",
 	"name": "maps",
-	"version": ""
+	"version": "",
+	"dependencies": {
+		"@types/google.maps": "^3.64.1"
+	}
 }
