@@ -715,17 +715,56 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"gH3Lb":[function(require,module,exports,__globalThis) {
 /// <reference types="@types/google.maps" />
-// import { User } from "./User";
-// import { Company } from "./Company";
+var _customMap = require("./CustomMap");
 // const user = new User();
 // const company = new Company();
-new google.maps.Map(document.getElementById("map"), {
-    zoom: 1,
-    center: {
-        lat: 0,
-        lng: 0
+const customMap = new (0, _customMap.CustomMap)("map");
+
+},{"./CustomMap":"eQj57"}],"eQj57":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CustomMap", ()=>CustomMap);
+class CustomMap {
+    constructor(divID){
+        this.googleMap = new google.maps.Map(document.getElementById(divID), {
+            zoom: 1,
+            center: {
+                lat: 0,
+                lng: 0
+            }
+        });
     }
-});
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"8vK1V"}],"8vK1V":[function(require,module,exports,__globalThis) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}]},["3lCuT","gH3Lb"], "gH3Lb", "parcelRequire57d4", {})
 
